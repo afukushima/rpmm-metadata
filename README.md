@@ -7,5 +7,9 @@ This repository contains the files that define the ontology. The overall ontolog
 - [ontology/core](ontology/core): contains 
   - the base ontology file: [RPMM_CORE.ttl](ontology/core/RPMM_CORE.ttl) that defines the classes and properties.
 
+- [schemaDiagram/core](schemaDiagram/core): includes 
   - [rpmm-schema.pdf](schemaDiagram/core/rpmm-schema.pdf) shows the schema diagrams of the RPMM-CORE.
+
+- [SPARQL/CORE](SPARQL/CORE): contains 
+  - example SPARQL queries that is accessible. For example, [project-details.sparql](SPARQL/CORE/project-detailas.sparql) returns the Project details.
   
