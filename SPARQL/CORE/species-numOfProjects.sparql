@@ -1,0 +1,13 @@
+SELECT DISTINCT ?species ?speciesLabel ?family ?familyLabel count(distinct ?proj)
+WHERE {
+  ?proj <http://metadb.riken.jp/ontology/plantMetabolomics/0.1/experiment> ?exp .
+  ?exp <http://metadb.riken.jp/ontology/plantMetabolomics/0.1/measurement> ?measurement .
+    ?measurement <http://metadb.riken.jp/ontology/plantMetabolomics/0.1/sampleMeasured> ?sample .
+    ?sample <http://metadb.riken.jp/ontology/plantMetabolomics/0.1/biologicalSample> ?bioSample .
+    ?bioSample <http://purl.obolibrary.org/obo/RO_0002162> ?species .
+    ?species <http://www.w3.org/2004/02/skos/core#prefLabel> ?speciesLabel .
+ 	?species rdfs:subClassOf+ ?family .
+    ?family <http://purl.bioontology.org/ontology/NCBITAXON/RANK> "family"^^<http://www.w3.org/2001/XMLSchema#string> .
+    ?family <http://www.w3.org/2004/02/skos/core#prefLabel> ?familyLabel .
+}
+   
