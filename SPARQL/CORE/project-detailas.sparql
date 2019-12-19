@@ -24,7 +24,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-SELECT DISTINCT ?proj ?speciesLabel ?expTypeLabel ?expFactorLabel ?piName ?piAffiName ?ref ?otherInfo ?desc
+SELECT DISTINCT ?proj ?title ?speciesLabel ?expTypeLabel ?expFactorLabel ?piName ?piAffiName ?ref ?otherInfo ?desc
 WHERE {
 
   Optional {
@@ -36,6 +36,10 @@ WHERE {
         ?piAffi <http://www.w3.org/2000/01/rdf-schema#label> ?piAffiName .
   }}}
 
+  Optional{
+    ?proj <http://www.w3.org/2000/01/rdf-schema#label> ?title FILTER (LANG(?title) = 'en') .
+  }
+  
   Optional {
     ?proj <http://purl.org/dc/dcmitype/references> ?ref .
   }
