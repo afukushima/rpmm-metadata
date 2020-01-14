@@ -24,7 +24,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-SELECT DISTINCT ?proj ?title ?speciesLabel ?expTypeLabel ?expFactorLabel ?piName ?piAffiName ?ref ?otherInfo ?desc
+SELECT DISTINCT ?proj ?title ?species ?speciesLabel ?expTypeLabel ?expFactorLabel ?piName ?piAffiName ?ref ?otherInfo ?desc
 WHERE {
 
   Optional {
